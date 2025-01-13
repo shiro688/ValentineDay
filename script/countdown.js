@@ -31,9 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCountdown();
     setInterval(updateCountdown, 1000); // Update every second
 
-    // Redirect to heartPage.html when the button is clicked
+    // Ensure the button exists before trying to add the event listener
     const button = document.getElementById("goToHeartPage");
-    button.addEventListener("click", () => {
-        window.location.href = 'heartPage.html';
-    });
+    if (button) {
+        button.addEventListener("click", () => {
+            window.location.href = 'page/heartPage.html';  // Use relative path without leading "/"
+        });
+    } else {
+        console.warn('Button with id "goToHeartPage" not found.');
+    }
 });
