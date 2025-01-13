@@ -82,7 +82,7 @@ heart.addEventListener('click', () => {
 
                 setTimeout(() => {
                     // Redirect to the next page
-                    window.location.href = 'page/valentinePage.html'; // Use relative path
+                    window.location.href = 'valentinePage.html'; // Use relative path
                 }, 1000); // Redirect after the pop animation
             }, 500); // Wait a moment before starting the pop effect
         } else {
