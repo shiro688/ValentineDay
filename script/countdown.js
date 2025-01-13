@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Check if today is Valentine's Day or after
         if (today >= valentinesDay) {
-            // Redirect to the main Valentine's Day page
-            window.location.href = 'heartPage.html';
+            // Redirect to the heartPage.html when the countdown hits Valentine's Day or after
+            window.location.href = './page/heartPage.html'; // Use relative path without leading "/"
         } else {
             // Calculate the difference in milliseconds
             const diffTime = valentinesDay - today;
@@ -30,14 +30,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // Run the countdown update immediately and every second
     updateCountdown();
     setInterval(updateCountdown, 1000); // Update every second
-
-    // Ensure the button exists before trying to add the event listener
-    const button = document.getElementById("goToHeartPage");
-    if (button) {
-        button.addEventListener("click", () => {
-            window.location.href = './page/heartPage.html';  // Use relative path without leading "/"
-        });
-    } else {
-        console.warn('Button with id "goToHeartPage" not found.');
-    }
 });
