@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("goToHeartPage");
     if (button) {
         button.addEventListener("click", () => {
-            window.location.href = 'page/heartPage.html';  // Use relative path without leading "/"
+            window.location.href = './page/heartPage.html';  // Use relative path without leading "/"
         });
     } else {
         console.warn('Button with id "goToHeartPage" not found.');
