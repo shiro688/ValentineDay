@@ -70,23 +70,24 @@ heart.addEventListener('click', () => {
     }
 
     // After 100 clicks
-    if (clickCount === 100) {
+    // After 100 clicks
+if (clickCount === 100) {
         if (text && heart) {
             text.style.opacity = "0"; // Hide the text after 100 clicks
             heart.style.transform = "scale(20)"; // Make the heart the size of the page
-
+        
             // After 1 second, pop the heart and redirect to new page
             setTimeout(() => {
                 heart.style.transition = 'transform 1s ease';
                 heart.style.transform = 'scale(0)'; // Simulate heart popping by shrinking it
-
+        
                 setTimeout(() => {
                     // Redirect to the next page
-                    window.location.href = './page/valentinePage.html'; // Use relative path
+                    window.location.href = './valentinePage.html'; // Use relative path
                 }, 1000); // Redirect after the pop animation
             }, 500); // Wait a moment before starting the pop effect
         } else {
             console.error("Text or heart element is missing!");
         }
     }
-    });
+});
