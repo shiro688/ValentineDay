@@ -59,7 +59,7 @@
             const hearts = document.querySelectorAll('.click-me');
 
             if (hearts.length === 0) {
-                window.location.href = '/page/mainValentine.html'; // Redirect to mainValentine.html
+                window.location.href = 'page/mainValentine.html'; // Redirect to mainValentine.html
             }
         }
 
